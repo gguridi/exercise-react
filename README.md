@@ -7,7 +7,7 @@ This example is based on the [Sudoku React Component](https://www.npmjs.com/pack
 
 ## Installation
 
-This code needs docker to run. Please [install docker](https://docs.docker.com/engine/installation/)
+This code can be automatically run with docker. Please [install docker](https://docs.docker.com/engine/installation/)
 in your local environment before proceed. The installation might be different depending on the
 operating system you are running.
 
@@ -15,14 +15,14 @@ Once docker is installed, go to this folder and build the virtual machine with:
 
 ```
 cd <path-to-this-code>
-docker build -t soe .
+docker build -t react-exercise .
 ```
 
 Then execute the following code to run the virtual machine. The webservice will be mapped automatically to the port 80
 of our local machine. (ensure no other process is running in the port 80 or it might conflict):
 
 ```
-docker run --name soe-test -p 80:5000 -p 3306:3306 -v `pwd`:/storage/app/ soe
+docker run -dit --name react-instance -v `pwd`:/storage/app -p 80:8080 react-exercise
 ```
 
 Note that the container has been created to run as an application. Once running it will
@@ -32,31 +32,16 @@ To connect to the container we can use (this will allow us to execute commands f
 inside the container using the bash shell):
 
 ```
-docker exec -it soe-test /bin/bash
+docker exec -it react-instance /bin/bash
 ```
 
 If you need to rerun the virtual machine then we need to remove it first. Maybe the
 following commands will help you executing _docker run_ again.
 
 ```
-docker stop soe-test
-docker rm soe-test
+docker stop react-instance
+docker rm react-instance
 ```
-
-## API Usage
-
-Once the docker instance is up we should see the flask framework running in the
-port 5000, but this port is automatically mapped with the port 80 of the host.
-
-Usually it's not recommended to write the API documentation in the README.md file as there
-are better tools to generate documentation from the code, but in this case we will do
-an exception.
-
-There are some endpoints created around students administration. A postman export has
-been added to the repository (postman-tests.json) to be able to test it.
-
-That file can be imported in the [Postman extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
-of chrome to be able to execute HTTP requests to the endpoints.
 
 ## Testing
 
