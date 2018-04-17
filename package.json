@@ -1,0 +1,48 @@
+{
+  "name": "exercise-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "watches": {
+    "sass": "scss/**"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build-css": "node-sass --include-path node_modules/bootstrap/scss/ src/stylesheets/ -o dist/css/",
+    "watch-css": "node-sass --include-path node_modules/bootstrap/scss/ src/stylesheets/ -o dist/css/ --watch --recursive"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gguridi/exercise-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gguridi/exercise-react/issues"
+  },
+  "homepage": ".",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.0.0",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "node-sass": "^4.8.3",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "sudoku-react-component": "0.0.5"
+  }
+}
