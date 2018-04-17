@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SudokuGame from 'sudoku-react-component';
+import App from './App';
 
-ReactDOM.render(<SudokuGame />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

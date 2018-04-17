@@ -51,15 +51,12 @@ it's intended to be kept simple.
 
 ### Unit testing
 
-The tests are located under tests/ directory.
+The tests are located altogether with the code, under the .test.js extension.
 
-To run the tests first we have to connect with the container.
-
-Once inside, we can execute from the command line:
+We can run the tests from inside the container or from outside, with:
 
 ```
-cd /storage/app
-pytest
+npm run test
 ```
 
 The command will output the results of the tests. If any assertion didn't succeed, the
