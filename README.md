@@ -7,7 +7,22 @@ This example is based on the [Sudoku React Component](https://www.npmjs.com/pack
 
 ## Installation
 
-This code can be automatically run with docker. Please [install docker](https://docs.docker.com/engine/installation/)
+This code can be automatically run with docker or without it.
+
+The first thing to do is to [fork this repository](https://help.github.com/articles/fork-a-repo/)
+in your account. Once you have it forked you can clone it in your local environment
+with the command:
+
+```
+git clone {repo-url} ./local-folder
+```
+
+Once we have done this, and from the folder we have cloned the code,
+we have the instructions to install it in two different ways:
+
+### Docker installation (optional)
+
+Please [install docker](https://docs.docker.com/engine/installation/)
 in your local environment before proceed. The installation might be different depending on the
 operating system you are running.
 
@@ -42,6 +57,35 @@ following commands will help you executing _docker run_ again.
 docker stop react-instance
 docker rm react-instance
 ```
+
+The docker is doing exactly as the next section, but inside a virtual container. This allows
+developers to automatise repetitive actions such deployments, local installations, etc.
+
+To access the application we can type in our browser `http://localhost`
+
+### Local installation (no docker)
+
+Please [install npm](https://www.npmjs.com/get-npm)
+in your local environment before proceed. The installation might be different depending on the
+operating system you are running.
+
+Then, from the folder we have cloned the code, we can see a `package.json` file.
+This file contains the dependencies of our project. To install them type:
+
+```
+npm install
+```
+
+This will create a folder called `.node_modules` that will contain the dependencies.
+
+Once the dependencies are there, we can start the development server with:
+
+```
+npm run start
+```
+
+This will start a development server listening by default in the port 8080. To
+access the application we can type in our browser `http://localhost:8080`
 
 ## Testing
 
