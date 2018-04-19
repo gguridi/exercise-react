@@ -8,9 +8,10 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "build-css": "node-sass --include-path node_modules/bootstrap/scss/ src/stylesheets/ -o dist/css/",
-    "watch-css": "node-sass --include-path node_modules/bootstrap/scss/ src/stylesheets/ -o dist/css/ --watch --recursive"
+    "start": "npm run watch-css | npm run start-server",
+    "start-server": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build-css": "node-sass --include-path node_modules/bootstrap/scss/ src/stylesheets/ -o public/css/",
+    "watch-css": "npm run build-css && node-sass --include-path node_modules/bootstrap/scss/ src/stylesheets/ -o public/css/ --watch --recursive"
   },
   "babel": {
     "presets": [
