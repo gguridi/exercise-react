@@ -87,6 +87,9 @@ npm run start
 This will start a development server listening by default in the port 8080. To
 access the application we can type in our browser `http://localhost:8080`
 
+It will also start a sass compiler that automatically will convert your sass
+files into css, creating the main.css file.
+
 ## Testing
 
 This example comes with two different kinds of tests: unit tests and integration/behavioural
