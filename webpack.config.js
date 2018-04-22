@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -22,6 +24,13 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+        '$': "jquery",
+        'jQuery': "jquery",
+        'Popper': 'popper.js'
+    }),
+  ],
   output: {
     path: __dirname + '/public',
     publicPath: '/js',

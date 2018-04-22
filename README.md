@@ -90,6 +90,38 @@ access the application we can type in our browser `http://localhost:8080`
 It will also start a sass compiler that automatically will convert your sass
 files into css, creating the main.css file.
 
+## Frontend Frameworks
+
+This exercise uses [bootstrap](https://getbootstrap.com/) and [jquery](https://jquery.com/) aside of
+React. This is a common configuration, as React is not responsive per se and the
+projects need additional dependencies to improve the frontend.
+
+Bootstrap is an open source toolkit for developing with HTML, CSS, and JS, and it
+depends on JQuery.
+
+This exercise has two ways of including these dependencies. If you see in the code that
+the libraries are repeated is intentional :) so you can see both approaches.
+
+The first one is including it directly into our HTML, using standard script tags:
+
+```HTML
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.js"></script>
+```
+
+The second one is installing them through npm. Then we include them as part of our
+React project and we let webpack, when builds the application, to manage the
+integration.
+
+```
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+```
+
+In the case of CSS we are usin [SASS](https://sass-lang.com/) to create our `main.css` file.
+We include bootstrap classes, etc. through SASS directly so we could potentially
+even choose which particular bootstrap components we want to include in our project.
+
 ## Testing
 
 This example comes with two different kinds of tests: unit tests and integration/behavioural
@@ -111,7 +143,7 @@ system will show the error and a stack trace to know where the problem started.
 
 ## Exercises
 
-Several exercises are available to be tried in the [EXERCISES.md file](EXERCISES.md).
+Several exercises are available to be tried in the [EXERCISES.md](EXERCISES.md) file.
 
 ## Contributors
 

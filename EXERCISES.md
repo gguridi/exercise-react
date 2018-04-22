@@ -12,13 +12,33 @@ All the exercises are possible and have been tested.
 This exercise involve only sass updates. [SASS](https://sass-lang.com/) and
 [CSS pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
+2. Move navigation menu at the bottom of the Sudoku.
 
-## Medum exercises
+For this we don't need react, as we can't access the SudokuGame component thus it's
+not possible to move it freely as we would like.
+
+As workaround, it's possible to use [jQuery](http://api.jquery.com/) directly to
+modify DOM elements however we want. Once the DOM is [ready](http://api.jquery.com/ready/),
+we should [manipulate](http://api.jquery.com/category/manipulation/) the element
+to move it wherever we want.
+
+## Medium exercises
 
 1. Render the src/images/logo.png at the top of the Sudoku board.
 
 This exercise involve javascript and the way to import images, embedding them
 into our code. Webpack is already prepared to handle it.
+
+2. Transform the navigation into a responsive navigation.
+
+Usually in most projects when we access via mobile we see a hamburguer in the top-right
+side of the page that once clicked expands a navigation menu. But, if we access
+the website through a desktop browser, the navigation is horitzontal and always visible.
+This is what we want to achieve in this exercise.
+
+This can be done with the boostrap [navbar component](https://getbootstrap.com/docs/4.0/components/navbar/).
+In this case, we should ignore those classes that modify the look&feel and focus
+in the behaviour of the menu.
 
 ## Advanced exercises
 
