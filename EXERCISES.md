@@ -50,3 +50,12 @@ into our code. Webpack is not ready to handle it.
 
 It's recommended to install [Enzyme](http://airbnb.io/enzyme/docs/api/ReactWrapper/find.html)
 to make the test straightforward.
+
+2. Extend the sudoku to show information about how many tiles are filled up
+
+This exercise involve creating your own React component extending SudokuGame one.
+Having access to this component will allow you to print your own HTML and show
+extra information that otherwise would be unaccessible.
+
+The extra information will be a div containing the number of tiles filled up
+by the user.
