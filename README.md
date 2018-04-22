@@ -109,36 +109,9 @@ npm run test
 The command will output the results of the tests. If any assertion didn't succeed, the
 system will show the error and a stack trace to know where the problem started.
 
-### Integration testing
+## Exercises
 
-The tests are located under tests_api/ directory.
-
-The tests are build through a library called [frisby](https://www.frisbyjs.com/) and
-executed using [jasmine](https://jasmine.github.io/). The dependencies are in a
-package.json file and installed through [npm](https://www.npmjs.com/)
-
-The dependencies of nodejs are usually installed inside a folder called node_modules.
-
-To run the tests first we have to connect with the container. And then execute:
-
-```
-cd /storage/app/test_api
-./node_modules/jasmine-node/bin/jasmine-node . --verbose
-```
-
-## Improvements
-
-Several improvements can be done to the code:
-
-- Create a Response class that wraps any response from our webservice, so the
-format is consistent across any endpoint (status, message, etc. might be
-something present at all of them).
-- Create a route (endpoint) that returns the number of students currently
-available in the system.
-- Create a route (endpoint) that returns the list of students ordered by the
-birthdate. A parameter can be sent to specify if the oldest one comes first or the
-youngest one instead. Choose one behaviour as default if the parameter is not specified.
-- Create a test for the above behaviours.
+Several exercises are available to be tried in the [EXERCISES.md file](EXERCISES.md).
 
 ## Contributors
 
