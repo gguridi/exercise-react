@@ -11,11 +11,6 @@
     "watch": "react-scripts watch",
     "format": "eslint --fix './src/**/**/*.{yml,js,jsx,json}'"
   },
-  "jest": {
-    "coverageReporters": [
-      "html"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gguridi/exercise-react.git"
