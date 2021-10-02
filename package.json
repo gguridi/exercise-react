@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test",
+    "test:ci": "react-scripts test --coverage",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "watch": "react-scripts watch",
@@ -20,7 +21,7 @@
     "url": "git+https://github.com/gguridi/exercise-react.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gguridi/exercise-react/issues"
   },
