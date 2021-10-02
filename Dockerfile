@@ -1,31 +1,21 @@
 # -- Dockerfile -- #
 #
 # docker build -t react-exercise .
-# docker run -dit --name react-instance -v `pwd`:/storage/app -p 80:8080 react-exercise
+# docker run -dit --name react-instance -p 80:3000 react-exercise
 # docker exec -it react-instance /bin/bash
 
-FROM ubuntu:16.04
+FROM node:12-buster
 
 LABEL Description="React Sudoku" Version="1.0"
 
-# Install generic tools
-RUN apt-get update && apt-get install -y \
-  sudo \
-  vim \
-  net-tools \
-  curl
+EXPOSE 3000
 
-# Add node source repository to install the latest version
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+ARG APP_DIR="/opt/exercise-react"
 
-# Install basic tools
-RUN apt-get update && apt-get install -y \
-  nodejs
+RUN mkdir -p ${APP_DIR}
+WORKDIR ${APP_DIR}
 
-# Bring the process starter
-COPY startup.sh /root/
-RUN chmod +x /root/startup.sh
+COPY . ${APP_DIR}
+RUN npm install
 
-EXPOSE 8080
-
-ENTRYPOINT [ "/root/startup.sh" ]
+ENTRYPOINT [ "npm", "run", "start" ]

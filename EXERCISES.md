@@ -7,20 +7,14 @@ All the exercises are possible and have been tested.
 
 ## Basic exercises
 
-1. Change color of the tiles the user has inserted a value.
+1. Change color of the tiles the user is editing at the moment.
 
 This exercise involve only sass updates. [SASS](https://sass-lang.com/) and
 [CSS pseudo-classes](https://www.w3schools.com/css/css_pseudo_classes.asp)
 
-2. Move navigation menu at the bottom of the Sudoku.
+2. When the sudoku is solved, show a message congratulating the user.
 
-For this we don't need react, as we can't access the SudokuGame component thus it's
-not possible to move it freely as we would like.
-
-As workaround, it's possible to use [jQuery](http://api.jquery.com/) directly to
-modify DOM elements however we want. Once the DOM is [ready](http://api.jquery.com/ready/),
-we should [manipulate](http://api.jquery.com/category/manipulation/) the element
-to move it wherever we want.
+For this we will need to understand the SudokuGame component and how to pass it callbacks.
 
 ## Medium exercises
 

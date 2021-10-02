@@ -1,0 +1,22 @@
+name: Testing
+
+on: push
+
+jobs:
+    unit-testing:
+        name: Unit Tests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 13
+            - name: install dependencies
+              run: npm install
+            - name: run tests
+              run: npm run test:ci
+            - name: Codecov
+              uses: codecov/codecov-action@v2
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
+                  flags: unittests

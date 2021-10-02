@@ -1,4 +1,8 @@
-## Synopsis
+# Synopsis
+
+[![Benchmark](https://github.com/gguridi/exercise-react/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/gguridi/exercise-react/actions/workflows/release.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d1cd1dc3fafb4086802a9a4a79b39189)](https://www.codacy.com/gh/gguridi/exercise-react/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gguridi/exercise-react&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/gguridi/exercise-react/branch/master/graph/badge.svg?token=IUDIfrcUOY)](https://codecov.io/gh/gguridi/exercise-react)
 
 This is a basic website intended to work with React and Bootstrap. This website gives a basic
 functionality to show information in a responsive way.
@@ -13,7 +17,7 @@ The first thing to do is to [fork this repository](https://help.github.com/artic
 in your account. Once you have it forked you can clone it in your local environment
 with the command:
 
-```
+```bash
 git clone {repo-url} ./local-folder
 ```
 
@@ -28,7 +32,7 @@ operating system you are running.
 
 Once docker is installed, go to this folder and build the virtual machine with:
 
-```
+```bash
 cd <path-to-this-code>
 docker build -t react-exercise .
 ```
@@ -36,8 +40,8 @@ docker build -t react-exercise .
 Then execute the following code to run the virtual machine. The webservice will be mapped automatically to the port 80
 of our local machine. (ensure no other process is running in the port 80 or it might conflict):
 
-```
-docker run -dit --name react-instance -v `pwd`:/storage/app -p 80:8080 react-exercise
+```bash
+docker run -it --name react-instance -p 80:3000 react-exercise
 ```
 
 Note that the container has been created to run as an application. Once running it will
@@ -46,14 +50,14 @@ show the standard output and terminating the process will terminate also the con
 To connect to the container we can use (this will allow us to execute commands from
 inside the container using the bash shell):
 
-```
+```bash
 docker exec -it react-instance /bin/bash
 ```
 
 If you need to rerun the virtual machine then we need to remove it first. Maybe the
 following commands will help you executing _docker run_ again.
 
-```
+```bash
 docker stop react-instance
 docker rm react-instance
 ```
@@ -72,7 +76,7 @@ operating system you are running.
 Then, from the folder we have cloned the code, we can see a `package.json` file.
 This file contains the dependencies of our project. To install them type:
 
-```
+```bash
 npm install
 ```
 
@@ -80,7 +84,7 @@ This will create a folder called `.node_modules` that will contain the dependenc
 
 Once the dependencies are there, we can start the development server with:
 
-```
+```bash
 npm run start
 ```
 
@@ -113,7 +117,7 @@ The second one is installing them through npm. Then we include them as part of o
 React project and we let webpack, when builds the application, to manage the
 integration.
 
-```
+```bash
 import 'jquery';
 import 'bootstrap/dist/js/bootstrap';
 ```
@@ -134,7 +138,7 @@ The tests are located altogether with the code, under the .test.js extension.
 
 We can run the tests from inside the container or from outside, with:
 
-```
+```bash
 npm run test
 ```
 
