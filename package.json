@@ -11,8 +11,8 @@
     "format": "eslint --fix './src/**/**/*.{yml,js,jsx,json}'"
   },
   "jest": {
-    "setupFiles": [
-      "./src/setupTests.js"
+    "coverageReporters": [
+      "html"
     ]
   },
   "repository": {
@@ -32,6 +32,7 @@
     "eslint": "^7.32.0",
     "eslint-config-react": "^1.1.7",
     "eslint-plugin-react": "^7.26.1",
+    "gh-pages": "^3.2.3",
     "node-sass": "^6.0.1",
     "react-scripts": "^4.0.3"
   },
