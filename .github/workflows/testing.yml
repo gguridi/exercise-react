@@ -1,6 +1,6 @@
 name: Testing
 
-on: [push, pull_request]
+on: push
 
 jobs:
     unit-testing:
@@ -14,7 +14,7 @@ jobs:
             - name: install dependencies
               run: npm install
             - name: run tests
-              run: npm test --coverage
+              run: npm test -- --coverage
             - name: Codecov
               uses: codecov/codecov-action@v2
               with:
