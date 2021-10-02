@@ -1,0 +1,9 @@
+$palette: (
+    black: #333333,
+    white: #fefefe,
+    gray: #7f7f7f,
+);
+
+@function color($name) {
+    @return map-get($palette, $name);
+}

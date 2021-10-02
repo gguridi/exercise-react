@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import SudokuGame from 'sudoku-react-component';
-import 'jquery';
-import 'bootstrap/dist/js/bootstrap';
-
+import React, { Component } from "react";
+import SudokuGame from "react-sudoku-component";
+import './stylesheets/main.scss';
 class App extends Component {
-
-  componentDidMount() {
-    console.log($.fn.tooltip.Constructor.VERSION);
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <SudokuGame />
-      </React.Fragment>
-    );
-  }
+    render () {
+        return (
+            <React.Fragment>
+                <SudokuGame />
+                <div className="powered-by">
+                    PoweredBy&nbsp;
+                    <a href="https://sunnanv.github.io/react-sudoku-component/" target="_blank" rel="noreferrer">React Sudoku Component</a>
+                </div>
+            </React.Fragment>
+        );
+    }
 }
 
 export default App;

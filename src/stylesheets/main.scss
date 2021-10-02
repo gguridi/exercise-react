@@ -1,11 +1,16 @@
-@import 'bootstrap.scss';
-
+@import '~bootstrap/scss/bootstrap';
 @import 'base/colors';
 
-.test {
-  color: blue;
+.difficulty-button {
+  background-color: color(gray);
+
+  &.difficulty-button-active {
+    background-color: color(white);
+  }
 }
 
-.test2 {
-  color: red;
+.powered-by {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
