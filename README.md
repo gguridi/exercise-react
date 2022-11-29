@@ -1,7 +1,7 @@
 # Synopsis
 
 [![Benchmark](https://github.com/gguridi/exercise-react/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/gguridi/exercise-react/actions/workflows/release.yml)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d1cd1dc3fafb4086802a9a4a79b39189)](https://www.codacy.com/gh/gguridi/exercise-react/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gguridi/exercise-react&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d1cd1dc3fafb4086802a9a4a79b39189)](https://www.codacy.com/gh/gguridi/exercise-react/dashboard?utm_source=github.com&utm_medium=referral&utm_content=gguridi/exercise-react&utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/gguridi/exercise-react/branch/master/graph/badge.svg?token=IUDIfrcUOY)](https://codecov.io/gh/gguridi/exercise-react)
 
 This is a basic website intended to work with React and Bootstrap. This website gives a basic
@@ -77,7 +77,7 @@ Then, from the folder we have cloned the code, we can see a `package.json` file.
 This file contains the dependencies of our project. To install them type:
 
 ```bash
-npm install
+yarn install
 ```
 
 This will create a folder called `.node_modules` that will contain the dependencies.
@@ -85,7 +85,7 @@ This will create a folder called `.node_modules` that will contain the dependenc
 Once the dependencies are there, we can start the development server with:
 
 ```bash
-npm run start
+yarn run start
 ```
 
 This will start a development server listening by default in the port 8080. To
@@ -139,7 +139,7 @@ The tests are located altogether with the code, under the .test.js extension.
 We can run the tests from inside the container or from outside, with:
 
 ```bash
-npm run test
+yarn run test
 ```
 
 The command will output the results of the tests. If any assertion didn't succeed, the

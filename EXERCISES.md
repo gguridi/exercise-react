@@ -37,7 +37,7 @@ in the behaviour of the menu.
 ## Advanced exercises
 
 1. Render the src/images/logo.svg at the top of the Sudoku board, adding unit
-tests to ensure the logo is rendered properly in the application.
+   tests to ensure the logo is rendered properly in the application.
 
 This exercise involve javascript and the way to import images, embedding them
 into our code. Webpack is not ready to handle it.

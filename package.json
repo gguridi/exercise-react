@@ -9,7 +9,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "watch": "react-scripts watch",
-    "format": "eslint --fix './src/**/**/*.{yml,js,jsx,json}'"
+    "check-code": "eslint './src/**/*.{js,jsx}'",
+    "check-format": "prettier -c .",
+    "lint": "yarn check-code && yarn check-format",
+    "fix": "eslint --fix src/ ",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -22,23 +26,26 @@
   },
   "homepage": ".",
   "devDependencies": {
-    "@babel/core": "^7.5.15",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "eslint": "^7.32.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-plugin-react": "^7.26.1",
-    "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1",
-    "react-scripts": "^4.0.3"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "gh-pages": "^4.0.0",
+    "node-sass": "^8.0.0",
+    "prettier": "^2.8.0",
+    "react-scripts": "^5.0.1"
   },
   "dependencies": {
-    "@popperjs/core": "^2.10.2",
-    "bootstrap": "^5.1.1",
-    "enzyme": "^3.11.0",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.3",
     "jquery": "^3.6.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-sudoku-component": "0.1.0"
   },
   "browserslist": {
